@@ -1,0 +1,113 @@
+site_name: JRbot/LetheBot 使用帮助
+nav:
+- '主页': index.md
+- '快速使用': tutorial.md
+- '群内使用':
+    - '可用模块': 'available-modules/index.md'
+    - '欢迎语': 'interact-with-group-msg/welcome-msg.md'
+    - '触发词': 'interact-with-group-msg/triggers.md'
+    - '退群“感言”': 'interact-with-group-msg/exit-msg.md'
+- '私聊使用':
+    - '问题反馈': 'communicate-with-private-msg/bug-reporting.md'
+- '使用管理功能':
+    - '主页': 'manage-group-with-bot/index.md'
+    - '禁言与解禁': 'manage-group-with-bot/ban-and-unban.md'
+    - '撤回消息': 'manage-group-with-bot/revoke-msg.md'
+    - '管理模块': 'manage-group-with-bot/managing-modules.md'
+- '个人音游自制谱下载': 'available-modules/get_personal_maps.md'
+- '常见问题Q&A': qa.md
+- '使用协议': agreement.md
+
+theme:
+  name: material
+  icon:
+    logo: material/cloud
+    repo: fontawesome/brands/github-alt
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.expand
+    - navigation.tracking
+    - navigation.instant
+    - header.autohide
+    - toc.integrate
+#    - announce.dismiss
+    - search.suggest
+    - search.highlight
+    - search.share
+  language: 'zh'
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: preference
+      primary: 'deep orange'
+      accent: amber
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 切换至夜间模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: 'blue grey'
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: 切换至白天模式
+extra_css: ['css/bot.css']
+
+copyright: copyright &copy; Jason Ren 2019-2021. All rights reserved
+repo_url: https://github.com/jasonren0403/jrbot_v1
+repo_name: jasonren0403/jrbot_v1
+edit_uri: edit/docs/docs_markdown
+site_description: 'JRbot/LetheBot help document'
+site_author: 'Jason'
+use_directory_urls: true
+docs_dir: 'docs_markdown'
+site_dir: 'docs'
+extra:
+  disqus: 'something'
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/jasonren0403
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      fallback_to_build_date: true
+      enable_creation_date: true
+  - tags:
+      tags_file: tags.md
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx-inline
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - attr_list
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
